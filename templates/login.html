@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<div class="container">
+    <h2 class="greet">LemurComm</h2>
+   
+    <form method="post">
+        <div>
+            Username: <input type="text" name="username"><br>
+        </div>
+        <div>
+            Password: <input type="password" name="password"><br>
+        </div>
+        <div>
+            <input type="submit" value="Login">
+        
+
+        </div>
+
+        <div class="create-org">
+            <a href="{{ url_for('register_organization') }}" class="btn btn-default">Create Organization</a>
+            <a href="{{ url_for('redirect_organization') }}" class="btn btn-default">Join Organization</a>
+        </div>
+    </form>
+    <!-- New div for Create Organization button -->
+    <div class="create-org">
+        
+    </div>
+</div>
+
+{% endblock %}

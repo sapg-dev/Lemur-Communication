@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatroom.css') }}">
+</head>
+<!-- Display all messages -->
+{% for message in messages %}
+<p><strong>{{ message.username }}</strong> ({{ message.timestamp.strftime("%A, %H:%M") }}): {{ message.message }}</p>
+{% endfor %}
+
+<!-- Chatroom selection form -->
+<form method="post">
+    <select name="chatroom">
+        {% for chatroom in chatrooms %}
+        <option value="{{ chatroom.name }}">{{ chatroom.name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Join">
+</form>
+
+{% endblock %}

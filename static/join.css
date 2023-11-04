@@ -1,0 +1,77 @@
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Makes sure the padding doesn't affect the overall width */
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #4cae4c;
+}
+
+/* Small screens (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .container {
+        width: 50%;
+    }
+}
+
+/* Medium screens (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container {
+        width: 40%;
+    }
+}
+
+/* Large screens (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container {
+        width: 30%;
+    }
+}
