@@ -285,6 +285,7 @@ def join_organization():
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
+    id = request.args.get('company_id') or session.get('company_id')
     # Check if the user is logged in and has a valid company_id
     
        # Redirect to the login page or appropriate route
@@ -294,7 +295,7 @@ def dashboard():
         chatroom_name = request.form.get('chatroom_name')
         if chatroom_name:
             # Create a new ChatRoom instance
-            new_chatroom = ChatRoom(name=chatroom_name, company_id=current_user.company_id)
+            new_chatroom = ChatRoom(name=chatroom_name, company_id=id)
             # Add the new chatroom to the session and commit to the database
             db.session.add(new_chatroom)
             try:
@@ -307,7 +308,7 @@ def dashboard():
             flash('Chatroom name is required.', 'warning')
 
     # Get the chat rooms associated with the current company
-    chatrooms = ChatRoom.query.filter_by(company_id=current_user.company_id).all()
+    chatrooms = ChatRoom.query.filter_by(company_id=id).all()
     return render_template('dashboard.html', chatrooms=chatrooms)
 
 
