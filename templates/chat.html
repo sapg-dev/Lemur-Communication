@@ -6,9 +6,15 @@
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chat.css') }}">
 </head>
+
+
+
 <div class="chat-container">
-    <header class="chat-header">
-        <h2>Welcome, {{ username }}</h2>
+    
+        
+    <form action="{{ url_for('select_chatroom', username=current_user.username) }}" method="post">
+            <button type="submit" class="change-btn">Change channel</button>
+        </form>
     </header>
     <!-- Messages list -->
     <ul id="chat-messages">
@@ -29,8 +35,19 @@
 
 
 <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+<script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
 <script>
-    var pusher = new Pusher('4f6a30582d3fee132dc9', {
+    const beamsClient = new PusherPushNotifications.Client({
+      instanceId: 'cd71b4b5-bd11-4e7a-8415-e19c1247b251',
+    });
+  
+    beamsClient.start()
+      .then(() => beamsClient.addDeviceInterest('hello'))
+      .then(() => console.log('Successfully registered and subscribed!'))
+      .catch(console.error);
+  </script>
+<script>
+    var pusher = new Pusher('d65c1eee46cdcd199bc6', {
         cluster: 'eu'
     });
 

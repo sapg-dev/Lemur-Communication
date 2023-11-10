@@ -13,12 +13,11 @@
         <form action="/join-organization" method="POST">
             <div class="form-group">
                 <label for="company_id">Company ID:</label>
-                <input type="text" id="company_id" name="company_id" required class="form-control" value="{{ company_id }}">
-
+                <input type="text" id="company_id" name="company_id" required class="form-control">
             </div>
             <div class="form-group">
                 <label for="company_password">Company Password:</label>
-                <input type="text" id="company_password" name="company_password" required class="form-control"  autocomplete="off"  value="{{ company_password }}">
+                <input type="password" id="company_password" name="company_password" required class="form-control">
             </div>
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -26,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label for="user_passwords">Password:</label>
-                <input type="password" id="user_password"  autocomplete="off" name="user_password" required class="form-control">
+                <input type="password" id="user_password" name="user_password" required class="form-control">
             </div>
             <button type="submit" class="btn btn-primary">Join</button>
         </form>

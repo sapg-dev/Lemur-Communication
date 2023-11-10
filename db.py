@@ -36,12 +36,12 @@ class User(UserMixin,db.Model):
 class Company(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)
-    password_hash = db.Column(db.String(128))  # Store a hash of the password
+    password = db.Column(db.String(128))  # Store a hash of the password
     unique_id = db.Column(db.String(36), unique=True, default=lambda: str(uuid.uuid4()))  # Generate a unique UUID
 
 
     def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
+        self.password = password
 
     
 

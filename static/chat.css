@@ -16,7 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #f4f4f8;
-    color: #333;
+    background: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
 }
 .chat-container {
     display: flex;
@@ -29,29 +29,71 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-
- 
+    background: white;/* Slightly updated background color for a futuristic look */
+    background-color: white ; /* Slightly updated background color for a futuristic look */
+    
+    
 }
+
+
 
 .chat-header {
-    padding: 20px;
-    background-color: black;
-    color: white;
+    display: flex; /* Use flex display to allow child elements to be flex items */
+    justify-content: space-between; /* Align content with space between */
+    align-items: center; /* Center align the items vertically */
+    padding: 10px 20px; /* Adjust padding to your preference */
+    background-color: white; /* Header background color */
+  /* Header font color */
+    background: linear-gradient(#141e30, #243b55);
+    color: linear-gradient(#141e30, #243b55);
+    background-color: linear-gradient(#141e30, #243b55);
+    border-bottom: 1px solid #ddd; /* Optional: adds a subtle line to divide the header from content */
 }
+.header {
+   
+   background:linear-gradient(#141e30, #243b55);
+    
+
+}
+.change-btn {
+    padding: 10px 15px; /* Adjust button padding to your preference */
+    background-color: #333; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+     /* Rounded corners for the button */
+    cursor: pointer; /* Cursor to indicate the button is clickable */
+    position: absolute; /* or 'fixed' if you want the element to stay at the right regardless of scrolling */
+    right: 0; /* Aligns the element to the far right */
+    top: 20px; 
+    z-index: 10000;
+    /* Any additional styling for the button can go here */
+}
+
+.change-btn:hover {
+    background-color: #444; /* Darker background on hover for button */
+}
+
+ 
+
+
+
 
 ul#chat-messages {
     flex-grow: 1;
     overflow-y: auto;
-    padding: 20px;
-    background: #e5e5e5;
+    padding: 0px;
+    background: white;
+    background:  white;
 }
 
 ul#chat-messages li {
     margin-bottom: 15px;
     padding: 10px 20px;
     background: white;
-    border-radius: 20px;
+    border-radius: 0px;
     position: relative;
+    color: black;
+    background:  white;
 }
 
 .message-form {
