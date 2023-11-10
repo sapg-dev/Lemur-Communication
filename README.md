@@ -43,12 +43,12 @@ To get this application running locally on your machine, you need to follow thes
 
     Configure your application by creating a .env file in the root directory of your project. This file should contain the following configurations:
     ```env
-SECRET_KEY='your_very_secret_key'
-DATABASE_URL='sqlite:///chat.db'
-PUSHER_APP_ID='your_pusher_app_id'
-PUSHER_KEY='your_pusher_key'
-PUSHER_SECRET='your_pusher_secret'
-PUSHER_CLUSTER='your_pusher_cluster'
+   SECRET_KEY='your_very_secret_key'
+   DATABASE_URL='sqlite:///chat.db'
+   PUSHER_APP_ID='your_pusher_app_id'
+   PUSHER_KEY='your_pusher_key'
+   PUSHER_SECRET='your_pusher_secret'
+   PUSHER_CLUSTER='your_pusher_cluster'
     
 4. **Install Dependencies:**
   '''bash
