@@ -1,23 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatroom.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatroom.css') }}">
-</head>
-<!-- Display all messages -->
-{% for message in messages %}
-<p><strong>{{ message.username }}</strong> ({{ message.timestamp.strftime("%A, %H:%M") }}): {{ message.message }}</p>
-{% endfor %}
+<div class="container">
+    <div class="sidebar">
+        <h3>Add New Chat Room</h3>
+        <form action="{{ url_for('select_chatroom',  username=current_user.username) }}" method="POST">
+            <input type="text" name="new_chatroom_name" placeholder="Enter chat room name" required>
+            <button type="submit" name="action" value="Create Room">Create</button>
+        </form>
+    </div>
 
-<!-- Chatroom selection form -->
-<form method="post">
-    <select name="chatroom">
+    <div class="chatroom-list">
+        <h3 class="heading">Available Chatrooms</h3>
         {% for chatroom in chatrooms %}
-        <option value="{{ chatroom.name }}">{{ chatroom.name }}</option>
+        <div class="chatroom-item">
+            <span>{{ chatroom.name }}</span>
+            <!-- The 'action' parameter was removed from url_for since it's not needed -->
+            <form action="{{ url_for('select_chatroom', username=current_user.username) }}" method="post">
+                <input type="hidden" name="chatroom_name" value="{{ chatroom.name }}">
+                <!-- Added 'join-btn' as a class to the button -->
+                <button type="submit" name="action" value="Join Chatroom" class="join-btn">Join</button>
+            </form>
+        </div>
         {% endfor %}
-    </select>
-    <input type="submit" value="Join">
-</form>
+    </div>
+</div>
 
 {% endblock %}

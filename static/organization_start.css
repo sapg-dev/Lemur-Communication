@@ -11,11 +11,12 @@ body {
 }
 
 .container {
-    background: #fff;
+    color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     text-align: center;
+    background: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
 }
 
 h2 {

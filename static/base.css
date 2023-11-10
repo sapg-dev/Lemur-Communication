@@ -1,0 +1,31 @@
+.header {
+    background-color: linear-gradient(#141e30, #243b55); /* Or any other color you prefer */
+    color: white;
+    padding: 10px 20px; /* Padding for aesthetic spacing */
+    display: flex;
+    justify-content: space-between; /* Horizontally center children */
+    align-items: center; /* Vertically center children */
+    position: fixed; /* Keeps the header at the top */
+    top: 0; /* At the top of the viewport */
+    left: 0; /* At the left of the viewport */
+    right: 0; /* At the right of the viewport */
+    z-index: 1000; /* Ensures the header is above other content */
+    text-decoration: underline;
+}
+
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    padding-top: 50px; /* Ensures the header doesn't overlap the content */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f8;
+    background: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
+}

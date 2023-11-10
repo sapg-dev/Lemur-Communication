@@ -1,34 +1,44 @@
-{% extends "base.html" %}
 
 {% block content %}
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
 </head>
-<div class="container">
-    <h2 class="greet">LemurComm</h2>
-   
+
+<div class="login-box">
+    <h2>LemurComm</h2>
     <form method="post">
-        <div>
-            Username: <input type="text" name="username"><br>
+        <div class="user-box">
+            <input type="text" name="username" required="">
+            <label>Username</label>
         </div>
-        <div>
-            Password: <input type="password" name="password"><br>
+        <div class="user-box">
+            <input type="password" name="password" required="">
+            <label>Password</label>
         </div>
-        <div>
-            <input type="submit" value="Login">
-        
-
-        </div>
-
-        <div class="create-org">
-            <a href="{{ url_for('register_organization') }}" class="btn btn-default">Create Organization</a>
-            <a href="{{ url_for('redirect_organization') }}" class="btn btn-default">Join Organization</a>
-        </div>
+        <a href="#" onclick="document.forms[0].submit(); return false;" class="animated-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Login
+        </a>
     </form>
-    <!-- New div for Create Organization button -->
-    <div class="create-org">
-        
+    <div class="link-group">
+        <a href="{{ url_for('register_organization') }}" class="animated-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Create Organization
+        </a>
+        <a href="{{ url_for('redirect_organization') }}" class="animated-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Join Organization
+        </a>
     </div>
 </div>
 

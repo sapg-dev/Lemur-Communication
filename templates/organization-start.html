@@ -6,18 +6,19 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='organization_start.css') }}">
 </head>
 <div class="container">
-    <h1>Congratulations: {{ company_name }} has been successfully created</h1>
-    <h1>Your Company: {{ company_name }}</h1>
+   
+    <h1>Your Organization: {{ company_name }}</h1>
     <p>Share this code with your employees or users:</p>
     <div class="code-display">
         <p><strong>Company ID:</strong> {{ unique_id }}</p>
         <p><strong>Company Password:</strong> {{ password }}</p>
     </div>
-    <p>Please save these details securely.</p>
+    <p>Please save the se details securely.</p>
     <div class="create-channels">
         <!-- The button redirects to a route where the channel creation process starts -->
-        <a href="/create-channels" class="btn btn-primary">Start Creating Channels</a>
-    </div>
+        <a href="{{ url_for('redirect_organization', company_id=unique_id, company_password=password) }}" class="btn btn-primary">Create administrator user</a>
+        <a href="{{ url_for('admin_dashboard') }}" class="btn btn-primary">Go to Admin Dashboard</a>
+
 
 </div>
 

@@ -5,13 +5,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
 }
 
 .container {
     display: flex;
+    background-color: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 20px;
+    color: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
 }
 
 .sidebar {

@@ -6,14 +6,29 @@
     max-width: 400px;
     margin: 0 auto;
     padding-top: 50px;
+    color: white;
     text-align: center;
   }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide scroll */
+    background-color: white;
+}
   
   /* Style for the greeting header */
   .greet {
-    color: #333;
+    color: white;
     font-size: 2em;
     margin-bottom: 10px;
+    background-color: white;
   }
   
   /* Input field styling */
@@ -61,4 +76,6 @@
   }
   
   /* Add any additional styles you want for your create organization page below */
-  
+  .body {
+    background: linear-gradient(#141e30, #243b55);
+  }

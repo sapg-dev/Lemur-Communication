@@ -1,76 +1,112 @@
+/* join.css */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide scroll */
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding-top: 50px;
+    background: linear-gradient(#141e30, #243b55); /* Slightly updated background color for a futuristic look */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); /* accounting for padding */
+    max-width: 400px; /* maximum width */
+    margin: 20px;
+    padding: 20px;
+    color: white;
 }
 
 h2 {
     text-align: center;
-    color: #333;
+    color: white;
+    margin-bottom: 20px; /* Added margin bottom */
+    font-weight: 600; /* Poppins semi-bold */
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    background: #f7f9fa; /* Subtle background for input fields */
+    border-radius: 5px; /* Slightly rounded borders for the input fields */
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #666;
+    color: #333;
+    padding-left: 10px; /* Label padding */
+    padding-top: 10px; /* Label padding */
+    font-size: 14px;
+    font-weight: 500; /* Poppins medium */
 }
 
 .form-group input[type="text"],
 .form-group input[type="password"] {
-    width: 100%;
+    width: calc(100% - 20px); /* Adjust width to account for padding */
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* Makes sure the padding doesn't affect the overall width */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Consistent rounded borders */
+    box-sizing: border-box;
+    font-size: 16px; /* Slightly larger font size for readability */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* subtle inset shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interaction */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    transform: scale(1.03); /* Slight scale for focus */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
 }
 
 .btn {
+    color: white;
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 15px; /* More padding for a larger button */
     border: none;
-    border-radius: 4px;
-    background-color: #5cb85c;
-    color: white;
+    border-radius: 5px;
+    background-color: #007bff; /* Bootstrap primary color */
+    background: black; /* Slightly updated background color for a futuristic look */
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px; /* Larger font size */
     text-transform: uppercase;
+    font-weight: 600; /* Poppins semi-bold */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition for a smooth effect */
+    margin-top: 10px; /* Space between last input and button */
 }
 
-.btn:hover {
-    background-color: #4cae4c;
+.btn:hover, .btn:focus {
+    background-color: #0056b3; /* Darker shade on hover/focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
 
-/* Small screens (landscape phones, 576px and up) */
+/* Media Queries */
 @media (min-width: 576px) { 
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) { 
+    .container {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) { 
     .container {
         width: 50%;
     }
 }
 
-/* Medium screens (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    .container {
-        width: 40%;
-    }
-}
-
-/* Large screens (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (min-width: 1200px) { 
     .container {
         width: 30%;
     }
