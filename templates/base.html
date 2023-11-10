@@ -9,8 +9,8 @@
         {% if session['user'] %}
             <p>Logged in as: {{ session['user'] }}</p>
             <a href="/admin/dashboard" class="btn btn-primary">Go to Admin Dashboard</a>
-            <a href="/chat" class="btn btn-primary">Home</a>
-            <a href="/logout" class="btn btn-primary">Logout</a>
+            
+            <a href="/" class="btn btn-primary">Logout</a>
             
         {% else %}
             <p>Not logged in</p>

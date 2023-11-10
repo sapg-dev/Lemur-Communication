@@ -366,7 +366,7 @@ def admin_dashboard():
                            organization_password=password, 
                            users=users, 
                            messages=messages, 
-                           chatrooms=chatrooms, company=new_company)
+                           chatrooms=chatrooms, company=new_company, acc_user = current_user)
 
 @app.route('/delete-user', methods=['POST'])
 def delete_user():

@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
+
+  
+    <div class="container mt-5">
+        <!-- Add a Bootstrap navigation bar at the top -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for('select_chatroom', username=acc_user, action='select-chatroom') }}">Home</a> <!-- Home button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Add additional navigation links if needed -->
+                </ul>
+            </div>
+        </nav>
+
     <div class="container mt-5">
         <h2>Administrator Dashboard</h2>
         <!-- Organization Details -->
@@ -92,7 +108,7 @@
                                     <!-- Add action buttons if necessary -->
                                     <button class="btn btn-primary btn-sm">Edit</button>
                                     <button class="btn btn-danger btn-sm" onclick="DeleteChat('{{ chatroom.id }}')">Delete</button>
-                                    <button class="btn btn-danger btn-sm" onclick="DeleteChat('{{ chatroom.id }}')">Join</button>
+                                    
                                 </td>
                             </tr>
                             {% endfor %}
