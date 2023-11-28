@@ -5,11 +5,11 @@
 ![PythonAnywhere Badge](https://img.shields.io/badge/PythonAnywhere-1D9FD7?logo=pythonanywhere&logoColor=fff&style=flat)
 ![SQLite Badge](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=fff&style=flat)
 
-# Flask Terminal Chat Application
+# Flask Chat Application
 
 ## Introduction
 
-This project is a real-time chat application designed for corporate use, where companies can have dedicated chat rooms for their teams to communicate instantly. The Flask Terminal Chat Application is built on top of Flask, a micro web framework written in Python, known for its simplicity and flexibility.
+This project is a real-time chat application designed for corporate use, where companies can have dedicated chat rooms for their teams to communicate instantly. The Flask Chat Application is built on top of Flask, a micro web framework written in Python, known for its simplicity and flexibility.
 
 The application features user authentication, real-time messaging through web sockets provided by Pusher, and a database-backed persistence layer using Flask-SQLAlchemy. It allows users from the same company to join a shared chat room where they can send messages and receive updates immediately, facilitating seamless communication within the organization.
 
