@@ -43,8 +43,8 @@ To get this application running locally on your machine, you need to follow thes
    Use Git to clone the repository to your local machine.
 
    ```bash
-   git clone [https://github.com/sapg-dev/lemurcom.git]
-   cd [local-repository-directory]
+   git clone https://github.com/sapg-dev/lemurcom.git
+   cd local-repository-directory
 
 3. **Configuration**
 
